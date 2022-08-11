@@ -18,15 +18,7 @@ class TANKPROJECT_API AMyPlayerController final : public APlayerController
 	GENERATED_BODY()
 
 public:
-	virtual	void SetupInputComponent() override;
-			
-	virtual void OnPossess(APawn* InPawn) override;
+	
 private:
-	void OnShoot() ;
-
-	void OnMoveForward(float Scale) ;
-
-	ATank*  Tank = nullptr;
-
-	void OnMoveRight(float Scale);
+	
 };
