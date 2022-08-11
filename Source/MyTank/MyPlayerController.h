@@ -3,15 +3,30 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include <TankProject/Tank.h>
 #include "GameFramework/PlayerController.h"
 #include "MyPlayerController.generated.h"
+
+
 
 /**
  * 
  */
 UCLASS()
-class MYTANK_API AMyPlayerController : public APlayerController
+class TANKPROJECT_API AMyPlayerController final : public APlayerController
 {
 	GENERATED_BODY()
-	
+
+public:
+	virtual	void SetupInputComponent() override;
+			
+	virtual void OnPossess(APawn* InPawn) override;
+private:
+	void OnShoot() ;
+
+	void OnMoveForward(float Scale) ;
+
+	ATank*  Tank = nullptr;
+
+	void OnMoveRight(float Scale);
 };
