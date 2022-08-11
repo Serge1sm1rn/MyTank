@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include <TankProject/Tank.h>
+#include <MyTank/Tank.h>
 #include "GameFramework/PlayerController.h"
 #include "MyPlayerController.generated.h"
 
